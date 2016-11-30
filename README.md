@@ -1,27 +1,19 @@
 # vue-tree-view
 
-> Tree view component for Vue.
+> Tree view component for Vue2.0.
 
-## Build Setup
+## Installation
+`npm install vue-tree-view`  
+and in your component  
+`import VueTreeView from 'vue-tree-view'`  
 
-``` bash
-# install dependencies
-npm install
+## Usage  
+`<vue-tree-view :treeData=yourData></vue-tree-view>`
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Props  
+| Name | Type | Default | Description |
+| ---: | --- | --- | --- |
+| treeData | Array | [] | data for rendering tree |
 
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Demo  
+[Demo link](http://tobe.engineer/tree-view-component-for-vue20.html)
