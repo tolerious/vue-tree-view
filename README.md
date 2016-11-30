@@ -21,8 +21,8 @@ and in your component
 
 ## Props  
 | Name | Type | Default | Description |
-| ---: | --- | --- | --- |
-| treeData | Array | [] | data for rendering tree |
+| --- | --- | :---: | --- |
+| treeData | Array | [] | data for rendering tree |  
 
 ## Demo  
 [Demo link](http://tobe.engineer/tree-view-component-for-vue20.html)
