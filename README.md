@@ -2,7 +2,7 @@
 
 > Tree view component for Vue2.0.  
 
-[![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/vue-tree-view)
+[![npm](https://img.shields.io/npm/dm/vue-tree-view.svg)](https://www.npmjs.com/package/vue-tree-view)
 
 ## Installation
 `npm install vue-tree-view`  
