@@ -10,7 +10,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/issues)
 [![GitHub forks](https://img.shields.io/github/forks/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/network)
 [![GitHub stars](https://img.shields.io/github/stars/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/stargazers)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/tolerious/vue-tree-view.svg?style=social)](https://twitter.com/intent/tweet?text=Tree view component for Vue2.0:https://github.com/tolerious/vue-tree-view&url=%5Bobject%20Object%5D)
 ## Installation
 `npm install vue-tree-view`  
 and in your component  
