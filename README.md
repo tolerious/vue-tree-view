@@ -9,7 +9,7 @@
 [![GitHub release](https://img.shields.io/github/release/qubyte/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view)
 [![GitHub issues](https://img.shields.io/github/issues/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/issues)
 [![GitHub forks](https://img.shields.io/github/forks/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/network)
-[![GitHub stars](https://img.shields.io/github/stars/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/tolerious/vue-tree-view.svg)](https://github.com/tolerious/vue-tree-view/stargazers) 
 ## Installation
 `npm install vue-tree-view`  
 and in your component  
