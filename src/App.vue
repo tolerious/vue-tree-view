@@ -19,17 +19,38 @@
               name: '第一章第一小节第一小段',
               children: [
                 {
-                  name: '第一章第一小节第一小段第一小天地'
+                  name: '第一章第一小节第一小段第一小天地',
+                  children: []
+                },
+                {
+                  name: '第一章第一小节第一小段第二小天地',
+                  children: []
                 }
               ]
             },
             {
-              name: '第一章第一小节第二小段'
+              name: '第一章第一小节第二小段',
+              children: [
+                {
+                  name: '第一章第一小节第二小段第一小天地',
+                  children: []
+                }
+              ]
             }
           ]
         },
         {
-          name: '第一章第二小节'
+          name: '第一章第二小节',
+          children: [
+            {
+              name: '第一章第二小节第一小段',
+              children: []
+            },
+            {
+              name: '第一章第二小节第二小段',
+              children: []
+            }
+          ]
         }
       ]
     },
@@ -37,12 +58,12 @@
       name: '第二章',
       children: [
         {
-          name: '第二章第一小节'
+          name: '第二章第一小节',
+          children: []
         }
       ]
     }
   ]
-
   export default {
     name: 'app',
     data () {
