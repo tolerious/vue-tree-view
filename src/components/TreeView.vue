@@ -1,69 +1,44 @@
 <template>
-  <div class="">
-    <ul v-for="td in treeData">
-      <!--<span v-if="td.children.length>0" class="fa fa-sort-down">{{td.name}}</span>-->
-      <!--<span v-else>{{td.name}}</span>-->
-      <span v-if="td.children.length>0" class="fa fa-sort-down" @click="handleCollapseItem(td)"></span>
-      <span v-else class="fa fa-sort-down" style="opacity: 0;"></span>
-      <span>{{td.name}}</span>
-      <span class="fa fa-trash-o" @click="handleDeleteItem"></span>
-      <span class="fa fa-plus" v-show="td.children.length>0"></span>
-
-      <!--<li v-show="isShow" :class="classObject">-->
-      <tree-view :treeData="td.children"></tree-view>
-      <!--</li>-->
-    </ul>
-  </div>
+  <ul>
+    <draggable element="ul" :list="treeData" @start="dragging=true" @end="dragging=true">
+      <tree-item :data="child" v-for="child in treeData">
+        <test-tree-view v-if="child.children" slot="childTreeComponent"
+                        :treeData="child.children">
+        </test-tree-view>
+      </tree-item>
+    </draggable>
+  </ul>
 </template>
 <style>
   ul, li {
     list-style: none;
   }
 
+  li {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
   span {
-    text-align: center;
+    margin-bottom: 10px;
   }
 </style>
 <script>
+  import draggable from 'vuedraggable'
+  import TreeItem from './TreeItem.vue'
   export default{
-    name: 'tree-view',
+    name: 'test-tree-view',
     props: ['treeData'],
     mounted: function () {
-      this.$nextTick(function () {
-        console.log('tick...')
-      })
     },
     data () {
-      return {
-        isShow: true,
-        classObject: {
-          animated: false,
-          lightSpeedOut: false
-        },
-        collapse: 'block'
-      }
+      return {}
     },
-    computed: {
-      isFolder: function () {
-        console.log(this.treeData)
-        if (this.treeData.length > 1) {
-          return true
-        } else {
-          return false
-        }
-      }
+    components: {
+      TreeItem,
+      draggable
     },
-    methods: {
-      handleCollapseItem: function (da) {
-        console.log('handle...')
-        console.log(this.treeData.length)
-        console.log(da.name)
-        console.log(da.children)
-      },
-      handleDeleteItem: function () {
-        console.log('delete item...')
-      }
-    },
-    components: {}
+    computed: {},
+    methods: {}
   }
 </script>
