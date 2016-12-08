@@ -4,7 +4,14 @@
     <tree-view :treeData="treeData"></tree-view>
   </div>
 </template>
-
+<style>
+  body, html {
+    font-size: 14px;
+  }
+  ul,li {
+    font-size: 14px;
+  }
+</style>
 <script>
   import Hello from './components/Hello'
   import TreeView from './components/TreeView.vue'
@@ -74,7 +81,8 @@
     components: {
       Hello,
       TreeView
-    }
+    },
+    methods: {}
   }
 </script>
 
