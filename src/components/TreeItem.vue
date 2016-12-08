@@ -1,6 +1,6 @@
 <template>
   <li @dblclick.stop="editItem">
-    <span v-if="isFloder" class="fa fa-caret-down" @click="clickCollapse"></span>
+    <span v-if="isFloder" class="fa" :class="[caretPosition]" @click="clickCollapse"></span>
     <span :class="{inputShow:inputHide,inputHide:inputShow}">{{data.name}}</span>
     <input v-focus="true" @focus="focused=true" @blur="inputBlur" v-model="name"
            :class="{inputShow:inputShow,inputHide:inputHide}">
@@ -37,6 +37,13 @@
     computed: {
       isFloder: function () {
         return this.data.children.length > 0 && this.data.children
+      },
+      caretPosition: function () {
+        if (this.showChild) {
+          return 'fa-caret-down'
+        } else {
+          return 'fa-caret-right'
+        }
       }
     },
     data () {
