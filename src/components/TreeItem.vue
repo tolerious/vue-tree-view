@@ -1,11 +1,13 @@
 <template>
   <li @dblclick.stop="editItem">
-    <span v-if="isFloder" class="fa fa-caret-down"></span>
+    <span v-if="isFloder" class="fa fa-caret-down" @click="clickCollapse"></span>
     <span :class="{inputShow:inputHide,inputHide:inputShow}">{{data.name}}</span>
     <input v-focus="true" @focus="focused=true" @blur="inputBlur" v-model="name"
            :class="{inputShow:inputShow,inputHide:inputHide}">
     <span class="fa fa-trash" @click="deleteItem"></span>
-    <slot name="childTreeComponent"></slot>
+    <div v-show="showChild">
+      <slot name="childTreeComponent"></slot>
+    </div>
   </li>
 </template>
 <style>
@@ -41,7 +43,8 @@
       return {
         inputShow: false,
         inputHide: true,
-        name: ''
+        name: '',
+        showChild: false
       }
     },
     components: {},
@@ -60,6 +63,9 @@
         this.inputHide = true
         console.log(this.name)
         this.data.name = this.name
+      },
+      clickCollapse: function () {
+        this.showChild = !this.showChild
       }
     }
   }
